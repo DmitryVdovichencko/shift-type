@@ -41,10 +41,11 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color:#333;
+  max-width:100%;
+  height:100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  padding:0px 10% ;
+  justify-content: space-between;
 
 }
 ol, ul {
@@ -62,7 +63,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   border:solid 1px lightgrey;
-  min-width: 360px;
+  min-width: 300px;
 }
 tr td{
   height:50px;
@@ -79,21 +80,27 @@ i{
   padding:5px;
   margin:10px;
 }
-
+.selected{
+  background-color: #EA625C;
+  color:white;
+}
 .calendar_wrapper{ 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width:70%;
-  margin:20px auto;
+  align-items: center;
+  width:100%;
+  margin-bottom:20px;
+  
 
  }
 .control{
   display:flex;
   flex-flow: row nowrap;
-  width:350px;
+  width:300px;
   margin: 20px 0px;
   color:#EA625C;
+  /*margin: 20px auto;*/
 
 }
 .control .act{
@@ -115,19 +122,88 @@ i{
   border-left:none;
 }
 .content_wrapper{
-  
-  width:100%;
+padding:0px 10% ;
+  width:80%;
 }
 .menu{
-
+display:flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
 }
 h1{
+  text-align: center;
   font-size: 3em;
   font-weight: 700;
-  margin:0px 0px 10px 0px;
+  margin:20px 0px 20px 0px;
   
 }
-.description{
-  width:60%;
-  line-height: 1.5em;
+
+.result p:first-child{
+  font-size:2em;
+  padding: 10px 0px;
+  color:#EA625C;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
 }
+.result p:nth-child(2){
+    font-size:1.5em;
+  padding: 10px 0px;
+}
+.prev, .next{
+  color:lightgrey;
+}
+.result{
+  margin-bottom: 20px;
+}
+
+
+.select-style {
+    border: 1px solid #ccc;
+   /* width: 120px;*/
+   color:#EA625C;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+    margin-bottom:10px;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+
+}
+.select-style:first-child{
+  margin-right:20px; 
+}
+
+.select-style select:focus {
+    outline: none;
+}
+footer{
+  width:80%;
+  background-color: #333;
+  padding:0px 10% ;
+}
+.social-icons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.social-icons i{
+  border:none;
+}
+.social-icons i:hover{
+  color: #EA625C;
+}
+/*@media only screen and (max-width: 350px){
+  tr td{
+    width:30px;
+    height:30px;
+  }
+}*/

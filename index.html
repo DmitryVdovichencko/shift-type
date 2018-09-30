@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test page for new lib</title>
+	<title>Веб приложение рабочие смены</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	
 	<div class="content_wrapper">
 		<h1>Рабочие смены</h1>
+		<!-- <div class="button more">
+			Как это работает?
+		</div>
 		<div class="description">
 			<p>Выберите тип своего графика и бригаду.На данный момент поддерживаются два типа графиков.</p>
 			<p>При выборе дат можно посмотреть как вы работаете в этот день.</p>
-		</div>
+		</div> -->
 		<div class="menu">
-			<select id="shift_type">
-				<option value="1" selected="selected">4 бригады. Cмена 12 часов</option>
-				<option value="2">4 бригады. Cмена 8 часов</option>
-		
-			</select>
+			<div class="select-style">
+				<select id="shift_type">
+					<option value="1" selected="selected">4 бригады. Cмена 12 часов</option>
+					<option value="2">4 бригады. Cмена 8 часов</option>
 			
-			<select id="teams">
-				<option value="1" selected="selected">Бригада 1</option>
-				<option value="2">Бригада 2</option>
-				<option value="3">Бригада 3</option>
-				<option value="4">Бригада 4</option>
-			</select>
+				</select>
+			</div>
+			<div class="select-style">
+				<select id="teams">
+					<option value="1" selected="selected">Бригада 1</option>
+					<option value="2">Бригада 2</option>
+					<option value="3">Бригада 3</option>
+					<option value="4">Бригада 4</option>
+				</select>
+			</div>
 		</div>
+
 
 		<div class="calendar_wrapper">
 			<div class="control">
@@ -43,7 +53,16 @@
 		<div class="result-wrapper">
 		</div>
 	</div>
-	<script type="text/javascript" src="WorkingDays.js"></script>
-	<script type="text/javascript" src="calendar_new.js"></script>
+	<footer>
+	
+		<div class="social-icons">
+			<a href="mailto:DmitryVdovichencko@gmail.com"><i class="fas fa-envelope-square"></i></a>
+			<a href="https://github.com/DmitryVdovichencko/shift-type"><i class="fab fa-github"></i></a>
+			<a href="https://www.twitter.com/@Dimetrio89"><i class="fab fa-twitter"></i></a>
+			<a href="https://medium.com/@Dimetrio89"><i class="fab fa-medium"></i></a>
+		</div>
+	</footer>
+	<script type="text/javascript" src="shift-type.js"></script>
+	<script type="text/javascript" src="calendar.js"></script>
 </body>
 </html>
